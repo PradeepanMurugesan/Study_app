@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Study</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: hwb(188 48% 43%); 
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px; 
+            margin: 50px auto; 
+            padding: 20px; 
+            background-color: #ffffff; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+        }
+        h1 {
+            text-align: center; 
+            color: #00796b; 
+            margin-bottom: 20px; 
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6; 
+            margin: 10px 0; 
+            color: #333; 
+        }
+        strong {
+            color: #00796b; 
+        }
+        a {
+            display: inline-block; 
+            margin-top: 20px; 
+            color: #00796b;
+            text-decoration: none; 
+            transition: color 0.3s; 
+            text-align: center; 
+            padding: 10px 15px; 
+            border: 2px solid #00796b; 
+            border-radius: 4px; 
+        }
+
+        a:hover {
+            color: white; 
+            background-color: #00796b; 
+            text-decoration: none; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>View Study</h1>
+        <p><strong>Study Name:</strong> {{ study.study_name }}</p>
+        <p><strong>Study Description:</strong> {{ study.study_description }}</p>
+        <p><strong>Study Phase:</strong> {{ study.study_phase }}</p>
+        <p><strong>Sponsor Name:</strong> {{ study.sponsor_name }}</p>
+        <a href="{% url 'main_view' %}">Cancel</a>
+    </div>
+</body>
+</html>
